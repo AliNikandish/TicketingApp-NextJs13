@@ -61,7 +61,7 @@ const Form = ({
     evnet.preventDefault();
     if (editMode) {
 
-      const res = await fetch(`/api/Tickets/${_id}`, {
+      const res = await fetch(`/api/tickets/${_id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
@@ -78,7 +78,7 @@ const Form = ({
       router.push('/');
 
     } else {
-      const res = await fetch("/api/Tickets", {
+      const res = await fetch("/api/tickets", {
         method: "POST",
         body: JSON.stringify({
           formData
