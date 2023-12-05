@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} dir='rtl'>
+      <body className='font-VazirMedium' dir='rtl'>
         <Navbar/>
         {children}
       </body>
