@@ -27,9 +27,7 @@ const getAllTickets=async()=>{
 }
 
 export default async function Home() {
-  const allTickets = await getAllTickets();  
-  console.log(allTickets);
-  
+  const allTickets = await getAllTickets();    
   const allTicketsData=allTickets.allTickets
   return (
     <div className="flex flex-wrap justify-center gap-5 mt-10">
