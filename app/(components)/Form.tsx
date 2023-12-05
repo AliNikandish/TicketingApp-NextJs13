@@ -5,13 +5,13 @@ import { useRouter } from "next/navigation";
 
 type FormProps={
     editMode:boolean,
-    _id:string,
-    title:string,
-    description:string,
-    category:string,
-    priority:number,
-    progress:number,
-    status:string,
+    _id?:string,
+    title?:string,
+    description?:string,
+    category?:string,
+    priority?:number,
+    progress?:number,
+    status?:string,
 }
 const Form = ({
   editMode,
@@ -33,7 +33,7 @@ const Form = ({
     status: "باز",
   };
 
-  if (editMode) {
+  if (editMode&&title&&description&&priority&&progress&&status&&category) {
     startingTicketData["title"] = title;
     startingTicketData["description"] = description;
     startingTicketData["priority"] = priority;
