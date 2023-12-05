@@ -11,7 +11,7 @@ type ticket={
 }
 const getAllTickets=async()=>{
   try {
-    const res=await fetch("http://localhost:3000/api/Tickets",{
+    const res=await fetch("http://localhost:3000/api/tickets",{
       cache:"no-store",
     })
     if (!res.ok) {
@@ -27,7 +27,9 @@ const getAllTickets=async()=>{
 }
 
 export default async function Home() {
-  const allTickets = await getAllTickets();
+  const allTickets = await getAllTickets();  
+  console.log(allTickets);
+  
   const allTicketsData=allTickets.allTickets
   return (
     <div className="flex flex-wrap justify-center gap-5 mt-10">
