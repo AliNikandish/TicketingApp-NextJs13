@@ -4,7 +4,7 @@ const DBName='ticketing-app'
 
 const ConnectToDB = async () =>{
 try {
-    if(mongoose.connection[0].redayState){
+    if(mongoose.connections[0].redayState){
         return false
     }
     await mongoose.connect(`mongodb://127.0.0.1:27017/${DBName}`)
