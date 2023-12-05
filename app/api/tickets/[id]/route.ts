@@ -5,8 +5,9 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(requet:NextRequest,{params}:any){
 
     ConnectToDB()
-    const {id}=params
-    const ticket = TicketModel.findOne({ _id: id })
+    const {id}=params    
+    const ticket = await TicketModel.findOne({ _id: id })
+    
     if (ticket !== null) {
         return NextResponse.json(
           {
