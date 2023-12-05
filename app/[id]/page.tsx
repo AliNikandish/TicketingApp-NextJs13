@@ -7,10 +7,10 @@ const getTicket = async (id:string) => {
     const res = await fetch(`http://localhost:3000/api/tickets/${id}`, {
       cache: "no-store",
     });
-    if (!res.ok) {
-      throw new Error("Failed to fetch topics");
-    }
-
+    if (!res.ok) {      
+      throw new Error("Failed to fetch topics");      
+      
+    }    
     return res.json();
   } catch (error) {
     console.log("Error loading topics: ", error);
@@ -19,9 +19,9 @@ const getTicket = async (id:string) => {
 
 
 const page = async ({ params }:any) => {
-  const ticket = await getTicket(params.id);
-  const ticketData = ticket.ticket;
-  const id=ticketData._id
+  const id=params.id
+  const ticket = await getTicket(id);  
+  const ticketData = ticket?.ticket;
   return (
     <div className="max-w-2xl p-6 mx-auto">
       <div className="">
