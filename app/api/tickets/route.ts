@@ -15,6 +15,15 @@ export async function GET() {
 }
 
 
-// export async function POST(req:NextRequest) {
-//     ConnectToDB()
-// }
+export async function POST(req:NextRequest) {
+    ConnectToDB()
+    try {
+        const body=await req.json()
+        const ticketData=body.formData
+        await TicketModel.create(ticketData)
+        return NextResponse.json({ message: "Ticket Created" }, { status: 201 });
+    } catch (error) {
+        return NextResponse.json({ message: "Erorr", error }, { status: 500 });
+    }
+   
+}
