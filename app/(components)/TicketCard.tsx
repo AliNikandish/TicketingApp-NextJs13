@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Priority from "./Priority";
 import Progress from "./Progress";
+import { FormatTime } from "@/utils/Helper";
 
 const TicketCard = ({
   _id,
@@ -29,7 +30,7 @@ const TicketCard = ({
         <div className="flex gap-x-1 items-center text-gray-600">
           <p className="">وضعیت : {status}</p>
         </div>
-        <p className="text-gray-400 text-xs mt-1">تاریخ ایجاد :{createdAt}</p>
+        <p className="text-gray-400 text-xs mt-1">تاریخ ایجاد :{FormatTime(createdAt)}</p>
         <div className="mt-4">
           <Link
             href={`/${_id}`}

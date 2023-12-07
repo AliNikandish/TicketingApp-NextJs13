@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFire } from "react-icons/fa";
 import Priority from "./Priority";
+import { FormatTime } from "@/utils/Helper";
 
 
 const InfoCard = ({
@@ -31,13 +32,13 @@ const InfoCard = ({
           <div className=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt className="text-sm font-medium text-gray-300">تاریخ ایجاد</dt>
             <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">
-              {createdAt}
+              {FormatTime(createdAt)}
             </dd>
           </div>
           <div className=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt className="text-sm font-medium text-gray-300">تاریخ آپدیت</dt>
             <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">
-              {updatedAt}
+              {FormatTime(updatedAt)}
             </dd>
           </div>
           <div className=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
