@@ -18,7 +18,7 @@ const Form = ({
   const startingTicketData = {
     title: "",
     description: "",
-    category: "",
+    category: "بک اند",
     priority: 1,
     progress: 10,
     status: "باز",
