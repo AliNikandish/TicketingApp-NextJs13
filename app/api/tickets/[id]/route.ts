@@ -2,7 +2,7 @@ import TicketModel from "@/app/models/Ticket";
 import ConnectToDB from "@/utils/ConnectToDB";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(requet:NextRequest,{params}:any){
+export async function GET(requet:NextRequest,{params}:params){
 
     ConnectToDB()
     const {id}=params    

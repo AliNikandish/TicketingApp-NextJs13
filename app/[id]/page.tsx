@@ -18,7 +18,7 @@ const getTicket = async (id:string) => {
 };
 
 
-const page = async ({ params }:any) => {
+const page = async ({ params }:params) => {
   const id=params.id
   const ticket = await getTicket(id);  
   const ticketData = ticket?.ticket;

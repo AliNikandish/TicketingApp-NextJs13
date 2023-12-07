@@ -16,7 +16,7 @@ const getTicket = async (id:string) => {
   }
 };
 
-const edit = async({params}:any) => {
+const edit = async({params}:params) => {
   const id=params.id
   const ticket = await getTicket(id);
   const ticketData = ticket.ticket;
