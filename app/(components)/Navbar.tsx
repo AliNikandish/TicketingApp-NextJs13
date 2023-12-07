@@ -13,10 +13,12 @@ const Navbar = () => {
 
       <nav className="nav font-semibold text-lg">
         <ul className="flex items-center">
+        <Link href="/add-ticket">
           <li className="flex justify-center items-center gap-x-1 p-4 border-b-2 border-red-500 border-opacity-0 hover:border-opacity-100 hover:text-red-500 duration-200 cursor-pointer active">
             <IoMdAddCircle />
-            <Link href="/add-ticket">ایجاد تیکت جدید</Link>
-          </li>
+            ایجاد تیکت جدید
+               </li>
+            </Link>
         </ul>
       </nav>
     </header>
