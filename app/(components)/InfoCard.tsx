@@ -2,16 +2,7 @@ import React from "react";
 import { FaFire } from "react-icons/fa";
 import Priority from "./Priority";
 
-type InfoCardProps = {
-  _id: string;
-  title: string;
-  description: string;
-  progress: number;
-  priority: number;
-  category: string;
-  createdAt: string;
-  updatedAt: string;
-};
+
 const InfoCard = ({
   _id,
   title,

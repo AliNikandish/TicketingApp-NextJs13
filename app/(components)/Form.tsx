@@ -3,16 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-type FormProps={
-    editMode:boolean,
-    _id?:string,
-    title?:string,
-    description?:string,
-    category?:string,
-    priority?:number,
-    progress?:number,
-    status?:string,
-}
+
 const Form = ({
   editMode,
   _id,

@@ -1,8 +1,6 @@
 import React from 'react'
 
-type ProgressProps={
-    progress:number
-}
+
 const Progress = (progress:ProgressProps) => {
   console.log(progress)
   return (

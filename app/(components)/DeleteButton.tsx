@@ -1,9 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-type DeleteButton={
-    id:string
-}
+
 const DeleteButton = ({id}:DeleteButton) => {
   const router = useRouter();
  

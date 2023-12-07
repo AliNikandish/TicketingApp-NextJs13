@@ -2,9 +2,7 @@ import { log } from 'console'
 import React from 'react'
 import { FaFire } from 'react-icons/fa'
 
-type PriorityProps={
-    priority:number,
-}
+
 const Priority = (priority:PriorityProps) => {
   return (
     <div className="flex gap-x-px ">
