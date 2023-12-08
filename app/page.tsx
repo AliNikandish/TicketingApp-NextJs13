@@ -1,14 +1,5 @@
 import TicketCard from './(components)/TicketCard'
 
-type ticket={
-  _id:string,
-    title:string,
-    description:string,
-    progress:number,
-    priority:number,
-    category:string,
-    createdAt:string
-}
 const getAllTickets=async()=>{
   try {
     const res=await fetch("http://localhost:3000/api/tickets",{
