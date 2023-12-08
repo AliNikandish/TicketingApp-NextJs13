@@ -20,6 +20,12 @@ const getAllTickets=async()=>{
 export default async function Home() {
   const allTickets = await getAllTickets();    
   const allTicketsData=allTickets.allTickets
+
+  if(!allTicketsData.length){
+  return<div className="flex flex-wrap justify-center gap-5 mt-10">
+            <p>هیچ تیکتی وجود ندارد</p>
+      </div>
+  }
   return (
     <div className="flex flex-wrap justify-center gap-5 mt-10">
       {allTicketsData.map((ticket:ticket)=>{
