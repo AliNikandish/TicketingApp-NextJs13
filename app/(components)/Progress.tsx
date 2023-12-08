@@ -2,7 +2,6 @@ import React from 'react'
 
 
 const Progress = (progress:ProgressProps) => {
-  console.log(progress)
   return (
     <div className="mt-4 mb-5">
           <p className="text-gray-600">درصد پیشرفت</p>
