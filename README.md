@@ -30,9 +30,6 @@
 
 
 
-## Demo:
-soon
-
 
 ## Installation
 
